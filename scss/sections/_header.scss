@@ -1,0 +1,217 @@
+.header {
+    padding: .8rem 0;
+
+    position: relative;
+    z-index: 99;
+
+    background: #FFFFFF;
+    box-shadow: 0 .3rem 1.5rem rgba(134, 132, 132, 0.25);
+
+    overflow: hidden;
+    
+    &__row {
+        width: 114rem;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 10.78rem;
+        height: 10.681rem;
+        margin-right: 7.214rem;
+
+        display: flex;
+    }
+
+    &__right {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        color: #323446;
+    }
+
+    &__top-bar {
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    &__img {
+        object-fit: cover;
+    }
+}
+
+.top-bar {
+    &__contacts {
+        margin: 0 3.5rem 0 10rem;
+        padding: 0 3.5rem;
+
+        display: flex;
+        align-items: center;
+
+        border-right: .05rem solid #D0CFCF;
+        border-left: .05rem solid #D0CFCF;
+    }
+
+    &__schedule {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+
+        &::before {
+            content: "";
+
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-right: .6rem;
+
+            transform: translateY(.4rem);
+
+            display: inline-block;
+
+            background-image: url("../img/header/icons/clock.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &__location {
+        @extend .top-bar__schedule;
+
+        position: relative;
+        color: #028CFF;
+        text-decoration: none;
+
+        &::before {
+            transform: translateY(.2rem);
+
+            background-image: url("../img/header/icons/marker.png");
+        }
+
+        &::after {
+            content: "";
+
+            width: calc(100% - 2.2rem);
+            height: .1rem;
+
+            position: absolute;
+            right: 0;
+            bottom: -.3rem;
+
+            background-color: #028CFF;
+
+            pointer-events: none;
+        }
+    }
+
+    &__phone {
+        margin-left: 7.817rem;
+
+        font-size: 2rem;
+        line-height: 2.7rem;
+
+        text-decoration: none;
+
+        color: #028CFF;
+    }
+
+    &__btn {
+        min-width: 22rem;
+
+        padding: 1.55rem 2.25rem;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.3rem;
+
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        background: #028CFF;
+        border-width: 0;
+        border-radius: 1rem;
+        
+        filter: drop-shadow(0 .6rem .8rem rgba(17, 17, 17, 0.25));
+    }
+}
+
+.nav {
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: space-between;
+        
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.4rem;
+
+        &--dropdown {
+            &::after {
+                content: "";
+
+                width: .9rem;
+                height: .5rem;
+
+                margin-left: .5rem;
+
+                display: inline-block;
+
+                transform: translateY(-.3rem);
+
+                background-image: url("../img/header/icons/nav_dropdown_arrow.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+
+        color: inherit;
+
+        text-decoration: none;
+
+        transition: all .2s;
+
+        &::before {
+            content: "";
+
+            width: 100%;
+            height: 0;
+
+            position: absolute;
+            right: 0;
+            bottom: -.8rem;
+
+            background-color:  #028CFF;
+
+            transition: all .2s;
+
+            pointer-events: none;
+        }
+
+        &:hover,
+        &:focus {
+            color: #028CFF;
+
+            &::before {
+                height: .2rem;
+            }
+        }
+    }
+}

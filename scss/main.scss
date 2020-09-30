@@ -1,0 +1,25 @@
+@import './fonts/open_sans';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans";
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+@import './sections/header';
+@import './sections/home_banner';
