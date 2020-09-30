@@ -77,7 +77,7 @@
 
 html {
   font-family: "Open Sans";
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 10px;
 }
 
@@ -91,7 +91,7 @@ button {
 }
 
 .header {
-  padding: .8rem 0;
+  padding: .3rem 0 .8rem;
   position: relative;
   z-index: 99;
   background: #FFFFFF;
@@ -114,7 +114,6 @@ button {
 .header__logo {
   width: 10.78rem;
   height: 10.681rem;
-  margin-right: 7.214rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,6 +121,7 @@ button {
 
 .header__right {
   width: 100%;
+  margin-left: 7.16rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +137,7 @@ button {
 
 .header__top-bar {
   height: 100%;
+  margin-right: .4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,11 +155,16 @@ button {
 }
 
 .top-bar__contacts {
-  margin: 0 3.5rem 0 10rem;
+  min-height: 3.6rem;
+  min-width: 49.886rem;
+  margin: 0 3.5rem 0 auto;
   padding: 0 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -167,19 +173,20 @@ button {
 }
 
 .top-bar__schedule, .top-bar__location {
+  margin: .85rem 0 0;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
 
 .top-bar__schedule::before, .top-bar__location::before {
   content: "";
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: .6rem;
-  -webkit-transform: translateY(0.4rem);
-          transform: translateY(0.4rem);
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .75rem;
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
   display: inline-block;
-  background-image: url("../img/header/icons/clock.png");
+  background-image: url("../img/header/icons/time.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -194,7 +201,7 @@ button {
 .top-bar__location::before {
   -webkit-transform: translateY(0.2rem);
           transform: translateY(0.2rem);
-  background-image: url("../img/header/icons/marker.png");
+  background-image: url("../img/header/icons/placeholder.svg");
 }
 
 .top-bar__location::after {
@@ -209,7 +216,7 @@ button {
 }
 
 .top-bar__phone {
-  margin-left: 7.817rem;
+  margin: .4rem 0 0;
   font-size: 2rem;
   line-height: 2.7rem;
   text-decoration: none;
@@ -217,18 +224,20 @@ button {
 }
 
 .top-bar__btn, .banner__btn {
-  min-width: 22rem;
-  padding: 1.55rem 2.25rem;
+  min-width: 25.85rem;
+  height: 4.9rem;
+  padding: 1.5rem;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  letter-spacing: .07rem;
   text-transform: uppercase;
   color: #FFFFFF;
   background: #028CFF;
   border-width: 0;
   border-radius: 1rem;
-  -webkit-filter: drop-shadow(0 0.6rem 0.8rem rgba(17, 17, 17, 0.25));
-          filter: drop-shadow(0 0.6rem 0.8rem rgba(17, 17, 17, 0.25));
+  -webkit-filter: drop-shadow(0 0.6rem 0.3rem rgba(17, 17, 17, 0.25));
+          filter: drop-shadow(0 0.6rem 0.3rem rgba(17, 17, 17, 0.25));
 }
 
 .nav__list {
@@ -290,9 +299,41 @@ button {
   height: .2rem;
 }
 
+.banner {
+  position: relative;
+  color: #323446;
+  overflow: hidden;
+}
+
 .banner__row {
   width: 114rem;
   margin: auto;
+  position: relative;
+}
+
+.banner__row::before, .banner__row::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: rgba(219, 192, 192, 0.19);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.banner__row::before {
+  width: 58.598rem;
+  height: 58.598rem;
+  bottom: -36rem;
+  left: -63rem;
+  border-radius: 12rem;
+}
+
+.banner__row::after {
+  width: 31.225rem;
+  height: 31.225rem;
+  bottom: -20rem;
+  left: -16rem;
+  border-radius: 7rem;
 }
 
 .banner__title {
@@ -301,6 +342,12 @@ button {
   font-size: 4.8rem;
   line-height: 5.5rem;
   color: #323446;
+}
+
+.banner__btn {
+  min-width: 22rem;
+  margin: 1.2rem 0;
+  letter-spacing: .5px;
 }
 
 .banner__carousel {

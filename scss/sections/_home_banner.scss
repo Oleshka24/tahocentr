@@ -1,8 +1,47 @@
 .banner {
+    position: relative;
+
+    color: #323446;
+
+    overflow: hidden;
+    
     &__row {
         width: 114rem;
 
         margin: auto;
+
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+    
+            position: absolute;
+            z-index: 1;
+            
+            background: rgba(219, 192, 192, 0.19);
+            transform: rotate(-45deg);
+        }
+    
+        &::before {
+            width: 58.598rem;
+            height: 58.598rem;
+
+            bottom: -36rem;
+            left: -63rem;
+            
+            border-radius: 12rem;
+        }
+    
+        &::after {
+            width: 31.225rem;
+            height: 31.225rem;
+
+            bottom: -20rem;
+            left: -16rem;
+
+            border-radius: 7rem;
+        }
     }
 
     &__title {
@@ -17,6 +56,11 @@
 
     &__btn {
         @extend .top-bar__btn;
+
+        min-width: 22rem;
+        margin: 1.2rem 0;
+
+        letter-spacing: .5px;
     }
 
     &__carousel {
