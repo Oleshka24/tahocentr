@@ -4,44 +4,42 @@
     color: #323446;
 
     overflow: hidden;
+
+    &::before,
+    &::after {
+        content: "";
+
+        position: absolute;
+        z-index: 1;
+        
+        background: rgba(219, 192, 192, 0.19);
+        transform: rotate(-45deg);
+    }
     
-    &__row {
-        width: 114rem;
+    &::before {
+        width: 58.598rem;
+        height: 58.598rem;
 
-        margin: auto;
+        bottom: -36rem;
+        left: -52rem;
+        //left: -63rem;
+        
+        border-radius: 12rem;
+    }
 
-        position: relative;
+    &::after {
+        width: 31.225rem;
+        height: 31.225rem;
 
-        &::before,
-        &::after {
-            content: "";
+        bottom: -20rem;
+        left: -6rem;
+        //left: -16rem;
+
+        border-radius: 7rem;
+    }
     
-            position: absolute;
-            z-index: 1;
-            
-            background: rgba(219, 192, 192, 0.19);
-            transform: rotate(-45deg);
-        }
-    
-        &::before {
-            width: 58.598rem;
-            height: 58.598rem;
-
-            bottom: -36rem;
-            left: -63rem;
-            
-            border-radius: 12rem;
-        }
-    
-        &::after {
-            width: 31.225rem;
-            height: 31.225rem;
-
-            bottom: -20rem;
-            left: -16rem;
-
-            border-radius: 7rem;
-        }
+    &__container {
+        @extend .header__container;
     }
 
     &__title {

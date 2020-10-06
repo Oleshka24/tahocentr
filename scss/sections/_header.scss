@@ -7,21 +7,16 @@
     background: #FFFFFF;
     box-shadow: 0 .3rem 1.5rem rgba(134, 132, 132, 0.25);
 
-    overflow: hidden;
-    
-    &__row {
+    &__container {
         width: 114rem;
         margin: auto;
 
+        position: relative;
+    }
+    
+    &__row {
         display: flex;
         justify-content: space-between;
-    }
-
-    &__logo {
-        width: 10.78rem;
-        height: 10.681rem;
-
-        display: flex;
     }
 
     &__right {
@@ -48,7 +43,20 @@
 }
 
 .logo {
+    &__link {
+        width: 10.78rem;
+        height: 10.681rem;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
     &__img {
+        width: 100%;
+        height: 100%;
+
         object-fit: cover;
     }
 }
