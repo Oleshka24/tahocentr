@@ -102,12 +102,9 @@
     }
 
     &__dot {
-        margin-left: 2.66rem;
-    }
-
-    &__dot-btn {
         width: 2rem;
         height: 2rem;
+        margin-left: 2.66rem;
         padding: 0;
 
         position: relative;
@@ -138,12 +135,13 @@
 
             transition: all .2s;
         }
-    }
 
-    
-    &__dot--current &__dot-btn::before,
-    &__dot-btn:hover::before,
-    &__dot-btn:focus::before {
-        background-color: #333333;
+        &.active,
+        &:hover,
+        &:focus {
+            &::before {
+                background-color: #333333;
+            }
+        }
     }
 }

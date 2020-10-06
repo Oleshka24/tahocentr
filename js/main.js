@@ -3,15 +3,11 @@ $('.carousel__list').owlCarousel({
     items: 1,
     nav: false,
     dots: true,
-    dotsContainer: $('.carousel__dots')
+    dotsClass: "carousel__dots",
+    dotClass: "carousel__dot"
 });
 
 $('.owl-stage').css("display", "flex");
 $('.owl-stage-outer').css("overflow", "hidden");
 $('.owl-nav.disabled').css("display", "none");
 $('.owl-dots.disabled').css("display", "none");
-
-$('.carousel__dot-btn').click(function () {
-    $('.carousel__dot').removeClass("carousel__dot--current");
-    $(this).parent('.carousel__dot').addClass("carousel__dot--current");
-});

@@ -392,12 +392,9 @@ button {
 }
 
 .carousel__dot {
-  margin-left: 2.66rem;
-}
-
-.carousel__dot-btn {
   width: 2rem;
   height: 2rem;
+  margin-left: 2.66rem;
   padding: 0;
   position: relative;
   font-size: .01rem;
@@ -407,7 +404,7 @@ button {
   background-color: transparent;
 }
 
-.carousel__dot-btn::before {
+.carousel__dot::before {
   content: "";
   width: .6rem;
   height: .6rem;
@@ -422,7 +419,7 @@ button {
   transition: all .2s;
 }
 
-.carousel__dot--current .carousel__dot-btn::before, .carousel__dot-btn:hover::before, .carousel__dot-btn:focus::before {
+.carousel__dot.active::before, .carousel__dot:hover::before, .carousel__dot:focus::before {
   background-color: #333333;
 }
 /*# sourceMappingURL=main.css.map */
