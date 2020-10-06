@@ -9,6 +9,7 @@
 
     &__container {
         width: 114rem;
+        min-width: 114rem;
         margin: auto;
 
         position: relative;
@@ -176,9 +177,13 @@
     }
 
     &__item {
+        position: relative;
+
         font-size: 1.4rem;
 
         &--dropdown {
+            perspective: 100rem;
+
             &::after {
                 content: "";
 
@@ -232,6 +237,88 @@
             &::before {
                 height: .2rem;
             }
+        }
+    }
+
+    &__subnav {
+        width: max-content;
+        margin: 0;
+        padding: 1.25rem 2.3rem 2.05rem 1.25rem;
+
+        position: absolute;
+        top: 2.75rem;
+        left: -1.4rem;
+
+        box-shadow: 0 .3rem 1.5rem rgba(134, 132, 132, 0.25);
+        border-radius: .4rem;
+
+        background-color: #FFFFFF;
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        transform: rotateX(-90deg);
+        transform-origin: top;
+
+        transition: all .4s;
+        transition-delay: 1s;
+    }
+
+    &__item:hover &__subnav {
+        top: 4.3rem;
+
+        opacity: 1;
+
+        transform: rotateX(0);
+
+        transition-delay: 0s;
+    }
+}
+
+.subnav {
+    &__title {
+        margin: 1.3rem 0 1rem;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.2rem;
+
+        color: #028CFF;
+
+        &::after {
+            content: "";
+
+            width: 13rem;
+            height: .2rem;
+
+            margin-top: .5rem;
+
+            display: block;
+
+            background-color: #028CFF;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__link {
+        @extend .nav__link;
+
+        &::before {
+            display: none;
         }
     }
 }

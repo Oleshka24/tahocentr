@@ -101,6 +101,7 @@ button {
 
 .header__container, .banner__container {
   width: 114rem;
+  min-width: 114rem;
   margin: auto;
   position: relative;
 }
@@ -267,7 +268,13 @@ button {
 }
 
 .nav__item {
+  position: relative;
   font-size: 1.4rem;
+}
+
+.nav__item--dropdown {
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
 }
 
 .nav__item--dropdown::after {
@@ -284,7 +291,7 @@ button {
   background-position: center;
 }
 
-.nav__link {
+.nav__link, .subnav__link {
   position: relative;
   color: inherit;
   text-decoration: none;
@@ -292,7 +299,7 @@ button {
   transition: all .2s;
 }
 
-.nav__link::before {
+.nav__link::before, .subnav__link::before {
   content: "";
   width: 100%;
   height: 0;
@@ -305,12 +312,78 @@ button {
   pointer-events: none;
 }
 
-.nav__link:hover, .nav__link:focus {
+.nav__link:hover, .subnav__link:hover, .nav__link:focus, .subnav__link:focus {
   color: #028CFF;
 }
 
-.nav__link:hover::before, .nav__link:focus::before {
+.nav__link:hover::before, .subnav__link:hover::before, .nav__link:focus::before, .subnav__link:focus::before {
   height: .2rem;
+}
+
+.nav__subnav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  padding: 1.25rem 2.3rem 2.05rem 1.25rem;
+  position: absolute;
+  top: 2.75rem;
+  left: -1.4rem;
+  -webkit-box-shadow: 0 0.3rem 1.5rem rgba(134, 132, 132, 0.25);
+          box-shadow: 0 0.3rem 1.5rem rgba(134, 132, 132, 0.25);
+  border-radius: .4rem;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.nav__item:hover .nav__subnav {
+  top: 4.3rem;
+  opacity: 1;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.subnav__title {
+  margin: 1.3rem 0 1rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+  color: #028CFF;
+}
+
+.subnav__title::after {
+  content: "";
+  width: 13rem;
+  height: .2rem;
+  margin-top: .5rem;
+  display: block;
+  background-color: #028CFF;
+}
+
+.subnav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.subnav__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.subnav__link::before {
+  display: none;
 }
 
 .banner {
