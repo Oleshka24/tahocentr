@@ -1,0 +1,272 @@
+body {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    background-color: #F8F8F8;
+}
+
+.content {
+    margin-top: 11.034rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    
+    background-color: transparent;
+    box-shadow: none;
+
+    transition: all .3s;
+
+    &--fixed {
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            
+            background-color: #F8F8F8;
+        }
+    }
+
+    &__burger {
+        margin: auto 0 auto auto;
+        display: inline-block;
+    }
+
+    &__right {
+        height: calc(100vh - 100%);
+        padding: 2rem .9rem 2rem 1.5rem;
+        margin: 0;
+
+        justify-content: flex-start;
+
+        position: absolute;
+        top: -100vh;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        background-color: #F8F8F8;
+
+        transition: all .3s;
+        
+        overflow: auto;
+
+        &--show {
+            top: 100%;
+        }
+    }
+
+    &__top-bar {
+        height: auto;
+        margin-top: 1.2rem;
+    }
+
+    &__nav {
+        margin: 0;
+    }
+}
+
+.logo {
+    &__link {
+        width: 10.027rem;
+        height: 9.935rem;
+    }
+}
+
+.top-bar {
+    &__left {
+        width: 30rem;
+
+        &::before {
+            left: 33.5%;
+        }
+    }
+
+    &__schedule {
+        margin: 0;
+    }
+
+    &__right {
+        width: 47.1rem;
+
+        &::before {
+            left: 44%;
+        }
+    }
+
+    &__btn {
+        min-width: 22.8rem;
+        height: 4.5rem;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+}
+
+.nav {
+    &__list {
+        margin-top: 2rem;
+        margin-left: .4rem;
+
+        flex-direction: column;
+    }
+
+    &__item {
+        margin-bottom: 1.1rem;
+    }
+
+    &__subnav {
+        height: 0;
+        padding: 0 2.1rem;
+        margin: 0;
+
+        position: static;
+
+        transform: none;
+        
+        opacity: 1;
+        box-shadow: none;
+        background-color: transparent;
+
+        overflow: hidden;
+
+        transition: all 0s;
+
+        &--show {
+            height: auto;
+            margin: .7rem 0 .2rem;
+        }
+    }
+}
+
+.subnav {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.burger {
+    &__btn {
+        width: 2.5rem;
+        height: 2rem;
+        padding: 0;
+        border-width: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: transparent;
+
+        &::before,
+        &::after {
+            content: "";
+
+            width: 100%;
+            height: .4rem;
+
+            position: relative;
+
+            background-color: #323446;
+
+            transition: all .4s;
+        }
+    }
+
+    &__descr {
+        @extend .burger__btn::after;
+
+        font-size: .1rem;
+        color: transparent;
+        transition: all .4s;
+    }
+    
+    &--close &__descr {
+        width: 0%;
+
+        top: 0;
+
+        transform: rotateZ(0) translateY(-50%);
+    }
+
+    &--close &__btn {
+        height: 3rem;
+        width: 3rem;
+
+        &::before {
+            top: 43%;
+
+            transform: rotateZ(45deg);
+        }
+
+        &::after {
+            bottom: 43%;
+
+            transform: rotateZ(-45deg);
+        }
+    }
+}
+
+.banner {
+    background-color: #F8F8F8;
+
+    &__title {
+        margin-bottom: 2.1rem;
+
+        font-size: 4.3rem;
+        line-height: 4.9rem;
+    }
+
+    &__btn {
+        min-width: 19.5rem;
+        margin: .4rem 0;
+    }
+
+    &__decor {
+        width: 45rem;
+        height: 23rem;
+
+        &::before {
+            bottom: -189%;
+            left: -55%;
+
+            border-radius: 10.4773rem;
+        }
+
+        &::after {
+            bottom: -111%;
+            left: 39.5%;
+
+            border-radius: 6.11174rem;
+        }
+    }
+}
+
+.carousel {
+    &__list {
+        background-position: right -105px;
+
+        &::before {
+            top: -10.5rem;
+        }
+    }
+
+    &__item {
+        min-height: 62.5rem;
+        padding: 1rem 0;
+    }
+
+    &__dots {
+        margin-bottom: .4rem;
+    }
+}

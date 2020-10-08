@@ -1,0 +1,54 @@
+.banner {
+    &__decor {
+        width: 36rem;
+        height: 20rem;
+
+        &::before {
+            bottom: -239.5%;
+            left: -72%;
+            border-radius: 7.78124rem;;
+        }
+        
+        &::after {
+            bottom: -131%;
+            left: 25.5%;
+            border-radius: 4.53906rem;
+        }
+    }
+}
+
+.top-bar {
+    &__left {
+        width: 26.8rem;
+
+        &::before {
+            left: 31.5%;
+        }
+    }
+
+    &__right {
+        width: 43.5rem;
+
+        &::before {
+            left: 43%;
+        }
+    }
+}
+
+.carousel {
+    &__list {
+        &::before {
+            top: 12rem;
+            background-size: 100%;
+        }
+    }
+
+    &__item {
+        min-height: 91.5rem;
+        padding: 1rem 0;
+    }
+
+    &__dots {
+        margin-bottom: 5rem;
+    }
+}

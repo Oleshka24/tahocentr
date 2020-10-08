@@ -1,0 +1,38 @@
+.banner {
+    &__decor {
+        width: 14rem;
+        height: 8rem;
+
+        &::before {
+            bottom: -766%;
+            left: -204%;
+
+            border-radius: 3.16809rem;
+        }
+
+        &::after {
+            bottom: -413%;
+            left: -43.5%;
+
+            border-radius: 1.84805rem;;
+        }
+    }
+}
+
+.carousel {
+    &__list {
+        &::before {
+            top: 0;
+            background-position: bottom;
+        }
+    }
+
+    &__item {
+        min-height: 48rem;
+    }
+
+    &__dots {
+        margin-bottom: 0;
+        bottom: 32px;
+    }
+}

@@ -2,41 +2,6 @@
     position: relative;
 
     color: #323446;
-
-    overflow: hidden;
-
-    &::before,
-    &::after {
-        content: "";
-
-        position: absolute;
-        z-index: 1;
-        
-        background: rgba(219, 192, 192, 0.19);
-        transform: rotate(-45deg);
-    }
-    
-    &::before {
-        width: 58.598rem;
-        height: 58.598rem;
-
-        bottom: -36rem;
-        left: -52rem;
-        //left: -63rem;
-        
-        border-radius: 12rem;
-    }
-
-    &::after {
-        width: 31.225rem;
-        height: 31.225rem;
-
-        bottom: -20rem;
-        left: -6rem;
-        //left: -16rem;
-
-        border-radius: 7rem;
-    }
     
     &__container {
         @extend .header__container;
@@ -66,6 +31,50 @@
         margin: 0;
 
         position: relative;
+        z-index: 1;
+    }
+
+    &__decor {
+        width: 55.5rem;
+        height: 30.5rem;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+
+        overflow: hidden;
+
+        &::before,
+        &::after {
+            content: "";
+
+            position: absolute;
+            z-index: 1;
+            
+            background: rgba(219, 192, 192, 0.19);
+            transform: rotate(-45deg);
+        }
+        
+        &::before {
+            width: 58.598rem;
+            height: 58.598rem;
+
+            bottom: -118%;
+            left: -86%;
+            
+            border-radius: 12rem;
+        }
+
+        &::after {
+            width: 31.225rem;
+            height: 31.225rem;
+
+            bottom: -66%;
+            left: -2%;
+
+            border-radius: 7rem;
+        }
     }
 }
 
@@ -74,12 +83,27 @@
         padding: 0;
         margin: 0;
 
+        position: relative;
+
         list-style-type: none;
 
-        background-image: url("../img/homepage_banner/banner_bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            background-image: url("../img/homepage_banner/banner_bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right top;
+
+            pointer-events: none;
+        }
     }
 
     &__item {

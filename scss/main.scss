@@ -21,5 +21,23 @@ button {
     cursor: pointer;
 }
 
+//  SECTIONS
 @import './sections/header';
 @import './sections/home_banner';
+
+//  ADAPTIVE
+@media(max-width: 1140px) {
+    @import './adaptive/tablet_l';
+}
+
+@media(max-width: 768px) {
+    @import './adaptive/tablet_s';
+}
+
+@media(max-width: /*568*/720px) {
+    @import './adaptive/mobile_l';
+}
+
+@media(max-width: /*320*/440px) {
+    @import './adaptive/mobile_s';
+}

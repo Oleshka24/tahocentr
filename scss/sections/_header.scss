@@ -8,9 +8,10 @@
     box-shadow: 0 .3rem 1.5rem rgba(134, 132, 132, 0.25);
 
     &__container {
-        width: 114rem;
-        min-width: 114rem;
+        width: 117rem;
+        max-width: 100%;
         margin: auto;
+        padding: 0 1.5rem;
 
         position: relative;
     }
@@ -41,6 +42,10 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    &__burger {
+        display: none;
+    }
 }
 
 .logo {
@@ -63,19 +68,48 @@
 }
 
 .top-bar {
-    &__contacts {
+    &__left,
+    &__right {
         min-height: 3.6rem;
-        min-width: 49.886rem;
 
-        margin: 0 3.5rem 0 auto;
-        padding: 0 3.5rem;
-
+        position: relative;
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+        //border-right: .05rem solid #D0CFCF;
 
-        border-right: .05rem solid #D0CFCF;
-        border-left: .05rem solid #D0CFCF;
+        &::before {
+            content: "";
+
+            width: .05rem;
+            height: 3.6rem;
+
+            position: absolute;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            background-color: #D0CFCF;
+        }
+    }
+
+    &__left {
+        width: 36.5rem;
+
+        &::before {
+            left: 45%;
+        }
+    }
+
+    &__right {
+        width: 50rem;
+        margin-left: 1.5rem;
+
+        &::before {
+            left: 41.5%;
+        }
     }
 
     &__schedule {
@@ -133,7 +167,11 @@
     }
 
     &__phone {
-        margin: .4rem 0 0;
+        margin: 0;
+
+        display: block;
+
+        position: relative;
 
         font-size: 2rem;
         line-height: 2.7rem;
@@ -165,7 +203,7 @@
     }
 }
 
-.nav {
+.nav {    
     &__list {
         margin: 0;
         padding: 0;
@@ -180,34 +218,46 @@
         position: relative;
 
         font-size: 1.4rem;
+    }
+    
+    &__item--dropdown > &__link {
+        perspective: 100rem;
 
-        &--dropdown {
-            perspective: 100rem;
+        &::after {
+            content: "";
 
-            &::after {
-                content: "";
+            width: .9rem;
+            height: .5rem;
 
-                width: .9rem;
-                height: .5rem;
+            margin-left: .5rem;
 
-                margin-left: .5rem;
+            display: inline-block;
 
-                display: inline-block;
+            transform: translateY(-.3rem);
 
-                transform: translateY(-.3rem);
+            background-image: url("../img/header/icons/nav_dropdown_arrow.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
 
-                background-image: url("../img/header/icons/nav_dropdown_arrow.svg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
+        &::before {
+            width: calc(100% - 1.4rem);
         }
     }
 
     &__link {
+        padding: 0;
+        margin: 0;
+        border-width: 0;
+
+        display: inline-block;
+
         position: relative;
 
         color: inherit;
+
+        background-color: transparent;
 
         text-decoration: none;
 
@@ -220,7 +270,7 @@
             height: 0;
 
             position: absolute;
-            right: 0;
+            left: 0;
             bottom: -.8rem;
 
             background-color:  #028CFF;
@@ -233,6 +283,7 @@
         &:hover,
         &:focus {
             color: #028CFF;
+            outline: none;
 
             &::before {
                 height: .2rem;
@@ -265,7 +316,10 @@
         transition-delay: 1s;
     }
 
-    &__item:hover &__subnav {
+    &__item:hover &__subnav,
+    &__link:hover + &__subnav,
+    &__link:focus + &__subnav,
+    &__link:active + &__subnav {
         top: 4.3rem;
 
         opacity: 1;
@@ -280,10 +334,13 @@
     &__title {
         margin: 1.3rem 0 1rem;
 
+        display: inline-block;
+
         font-style: normal;
         font-weight: normal;
         font-size: 1.4rem;
         line-height: 1.2rem;
+        text-decoration: none;
 
         color: #028CFF;
 

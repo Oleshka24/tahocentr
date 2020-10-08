@@ -6,9 +6,10 @@
 
         <link rel="stylesheet" href="./css/main.css">
 
-        <!-- OWL Carousel-->
         <link rel="stylesheet" href="./lbs/OwlCarousel/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="./lbs/OwlCarousel/assets/owl.theme.default.min.css">
+
+        <link rel="stylesheet" href="./lbs/fancybox-master/dist/jquery.fancybox.min.css">
     </head>
     <body>
         <header class="header">
@@ -19,14 +20,21 @@
                             <img class="logo__img" src="./img/header/logo.png" alt="Тахоцентр.рф">
                         </a>
                     </div>
+                    <div class="header__burger">
+                        <button class="burger__btn">
+                            <span class="burger__descr">Открыть меню</span>
+                        </button>
+                    </div>
                     <div class="header__right">
                         <div class="header__top-bar">
-                            <a href="#" class="top-bar__location">Москва</a>
-                            <div class="top-bar__contacts">
+                            <div class="top-bar__left">
+                                <a href="#" class="top-bar__location">Москва</a>
                                 <p class="top-bar__schedule">Будние дни - 9:00 - 18:00</p>
-                                <a href="tel:74951060256" class="top-bar__phone">+7 (495) 106-02-56</a>
                             </div>
-                            <button class="top-bar__btn">Заказать обратный звонок</button>
+                            <div class="top-bar__right">
+                                <a href="tel:74951060256" class="top-bar__phone">+7 (495) 106-02-56</a>
+                                <button class="top-bar__btn">Заказать обратный звонок</button>
+                            </div>
                         </div>
                         <nav class="header__nav">
                             <ul class="nav__list">
@@ -34,7 +42,7 @@
                                 <li class="nav__item nav__item--dropdown">
                                     <a href="#" class="nav__link">Тахографы</a>
                                     <nav class="nav__subnav">
-                                        <h3 class="subnav__title">Тахографы с СКЗИ</h3>
+                                        <a href="#" class="subnav__title">Тахографы с СКЗИ</a>
                                         <ul class="subnav__list">
                                             <li class="subnav__item"><a href="#" class="subnav__link">Тахографы ЕСТР для выезда за границу</a></li>
                                             <li class="subnav__item"><a href="#" class="subnav__link">Замена блока СКЗИ</a></li>
@@ -52,7 +60,7 @@
                 </div>
             </section>
         </header>
-        <main>
+        <main class="content">
             <section class="banner">
                 <div class="banner__container">
                     <div class="banner__carousel">
@@ -90,11 +98,13 @@
                         </ul>
                     </div>
                 </div>
+                <div class="banner__decor"></div>
             </section>
         </main>
 
         <script src="./lbs/jquery.min.js"></script>
         <script src="./lbs/OwlCarousel/owl.carousel.min.js"></script>
+        <script src="./lbs/fancybox-master/dist/jquery.fancybox.min.css"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
