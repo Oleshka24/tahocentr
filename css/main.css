@@ -518,6 +518,10 @@ button {
   cursor: pointer;
 }
 
+.popup__checkbox:checked::before {
+  background-color: #028CFF;
+}
+
 .popup__submit {
   width: 22rem;
 }

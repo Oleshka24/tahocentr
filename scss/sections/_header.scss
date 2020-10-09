@@ -457,6 +457,10 @@
 
             cursor: pointer;
         }
+
+        &:checked::before {
+            background-color: #028CFF;
+        }
     }
 
     &__submit {
