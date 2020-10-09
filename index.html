@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./lbs/OwlCarousel/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="./lbs/OwlCarousel/assets/owl.theme.default.min.css">
 
-        <link rel="stylesheet" href="./lbs/fancybox-master/dist/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="./lbs/fancybox-master/jquery.fancybox.min.css">
     </head>
     <body>
         <header class="header">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="top-bar__right">
                                 <a href="tel:74951060256" class="top-bar__phone">+7 (495) 106-02-56</a>
-                                <button class="top-bar__btn">Заказать обратный звонок</button>
+                                <button class="top-bar__btn" data-fancybox data-src="#header__popup">Заказать обратный звонок</button>
                             </div>
                         </div>
                         <nav class="header__nav">
@@ -59,6 +59,19 @@
                     </div>
                 </div>
             </section>
+            <section class="header__popup" id="header__popup" style="display: none">
+                <form action="" method="post" class="popup__form">
+                    <h2 class="popup__title">Связаться с нами</h2>
+                    <input type="text" class="popup__control" placeholder="Ваше имя">
+                    <input type="text" class="popup__control" placeholder="Ваш email или телефон для связи">
+                    <input type="text" class="popup__control" placeholder="Ваш вопрос">
+                    <label class="popup__label">
+                        <input type="checkbox" class="popup__checkbox">
+                        <span class="popup__descr">Нажимая кнопку «ОТПРАВИТЬ ВОПРОС», <br>я даю свое согласие на обработку персональных данных</span>
+                    </label>
+                    <input type="submit" class="popup__submit" value="Отправить сообщение">
+                </form>
+            </section>
         </header>
         <main class="content">
             <section class="banner">
@@ -68,32 +81,32 @@
                             <li class="carousel__item">
                                 <h1 class="banner__title">Установка готовых решений <br>по мониторингу транспорта <br>с пожизненной гарантией!</h1>
                                 <p>Наши решения по мониторингу транспорта <br>сделают Ваш бизнес более выгодным <br>и надежным!</p>
-                                <button class="banner__btn">Заказать решение</button>
+                                <button class="banner__btn" data-fancybox data-src="#header__popup">Заказать решение</button>
                             </li>
                             <li class="carousel__item">
                                 <h1 class="banner__title">Установка готовых решений <br>по мониторингу транспорта <br>с пожизненной гарантией!</h1>
                                 <p>Наши решения по мониторингу транспорта <br>сделают Ваш бизнес более выгодным <br>и надежным!</p>
-                                <button class="banner__btn">Заказать решение</button>
+                                <button class="banner__btn" data-fancybox data-src="#header__popup">Заказать решение</button>
                             </li>
                             <li class="carousel__item">
                                 <h1 class="banner__title">Установка готовых решений <br>по мониторингу транспорта <br>с пожизненной гарантией!</h1>
                                 <p>Наши решения по мониторингу транспорта <br>сделают Ваш бизнес более выгодным <br>и надежным!</p>
-                                <button class="banner__btn">Заказать решение</button>
+                                <button class="banner__btn" data-fancybox data-src="#header__popup">Заказать решение</button>
                             </li>
                             <li class="carousel__item">
                                 <h1 class="banner__title">Установка готовых решений <br>по мониторингу транспорта <br>с пожизненной гарантией!</h1>
                                 <p>Наши решения по мониторингу транспорта <br>сделают Ваш бизнес более выгодным <br>и надежным!</p>
-                                <button class="banner__btn">Заказать решение</button>
+                                <button class="banner__btn" data-fancybox data-src="#header__popup">Заказать решение</button>
                             </li>
                             <li class="carousel__item">
                                 <h1 class="banner__title">Установка готовых решений <br>по мониторингу транспорта <br>с пожизненной гарантией!</h1>
                                 <p>Наши решения по мониторингу транспорта <br>сделают Ваш бизнес более выгодным <br>и надежным!</p>
-                                <button class="banner__btn">Заказать решение</button>
+                                <button class="banner__btn" data-fancybox data-src="#header__popup">Заказать решение</button>
                             </li>
                             <li class="carousel__item">
                                 <h1 class="banner__title">Установка готовых решений <br>по мониторингу транспорта <br>с пожизненной гарантией!</h1>
                                 <p>Наши решения по мониторингу транспорта <br>сделают Ваш бизнес более выгодным <br>и надежным!</p>
-                                <button class="banner__btn">Заказать решение</button>
+                                <button class="banner__btn" data-fancybox data-src="#header__popup">Заказать решение</button>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +117,7 @@
 
         <script src="./lbs/jquery.min.js"></script>
         <script src="./lbs/OwlCarousel/owl.carousel.min.js"></script>
-        <script src="./lbs/fancybox-master/dist/jquery.fancybox.min.css"></script>
+        <script src="./lbs/fancybox-master/jquery.fancybox.min.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>

@@ -41,4 +41,4 @@ $('.burger__btn').click(function(){
 
 $('.nav__item--dropdown .nav__link').click(function() {
     $(this).siblings($('.nav__subnav')).toggleClass('nav__subnav--show');
-})
+});

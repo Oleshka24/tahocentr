@@ -79,6 +79,48 @@ body {
     }
 }
 
+.popup {
+    &__form {
+        width: 38rem;
+        padding: 2rem 1.5rem;
+
+        font-size: 1.2rem;
+    }
+
+    &__title {
+        margin-bottom: 2.5rem;
+
+        font-size: 1.3rem;
+    }
+
+    &__control {
+        margin-bottom: 2.6rem;
+    }
+
+    &__label {
+        margin-bottom: 2rem;
+
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    &__checkbox {
+        width: 1.94rem;
+        height: .1rem;
+        margin-right: 1.365rem;
+
+
+        &::before {
+            height: 1.94rem;
+            border-width: .143718rem;
+        }
+    }
+
+    &__submit {
+        width: 1.94rem;
+    }
+}
+
 .content {
     margin-top: 9.025rem;
 }
